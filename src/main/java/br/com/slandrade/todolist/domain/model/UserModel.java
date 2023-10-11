@@ -1,4 +1,4 @@
-package br.com.slandrade.todolist.user;
+package br.com.slandrade.todolist.domain.model;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
