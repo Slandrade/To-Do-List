@@ -11,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.SneakyThrows;
 
 @Getter
 @Setter
@@ -31,4 +32,11 @@ public class TaskModel {
 
   @CreationTimestamp
   private LocalDateTime createdAt;
+
+  public void setTitle(String title) throws Exception {
+    if(title.length() > 50) {
+      throw new Exception("O título tem um limite de 50 caracteres");
+    }
+    this.title = title;
+  }
 }
